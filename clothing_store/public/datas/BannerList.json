@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "img": "/Image/banner/students.png",
+        "title": "Step into Success with Our Premium Uniforms",
+        "description": "Discover high-quality, comfortable uniforms designed to help  feel confident and ready to achieve their best every day!"
+    },
+    {
+      "id": 2,
+      "img": "/Image/banner/cap.png",
+      "title": "Top Off Your Style with Trendy Caps",
+      "description": "Complete your look with our stylish collection of caps. Perfect for any occasion – grab yours now!"
+    },
+    {
+      "id": 3,
+      "img": "/Image/banner/t_shirt3.png",
+      "title": "Fresh Collection of Casual Tees",
+      "description": "Discover our comfortable and trendy t-shirts, designed to keep you stylish every day. Shop the latest collection now!"
+    },
+    {
+      "id": 4,
+      "img": "/Image/banner/freeDelivery.png",
+      "title": "Fast & Free Delivery on All Orders!",
+      "description": "Enjoy free delivery on every purchase. Shop your favorite products and get them delivered to your doorstep quickly!"
+    }
+  ]
+  

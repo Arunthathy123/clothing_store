@@ -1,0 +1,31 @@
+[
+    {
+      "id": 1,
+      "img": "/Image/topProducts/cap2.jpg",
+      "title": "Stylish Cap",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.",
+      "price": 150,
+      "inStock": true
+    },
+    {
+      "id": 2,
+      
+      "img": "/Image/topProducts/outFit3.jpg",
+      "title": "Uniform Outfit",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempor incididunt ut labore.",
+      "price": 550,
+      "inStock": false
+
+    },
+    {
+      "id": 3,
+      "img": "/Image/topProducts/tShirt2.jpg",
+      "title": "Printed T-Shirt",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ullamco laboris nisi.",
+      "price": 250,
+      "inStock": true
+
+    }
+    
+  ]
+  
