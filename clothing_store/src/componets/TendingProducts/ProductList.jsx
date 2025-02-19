@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Swal from 'sweetalert2';
 import Button from '../CommonUtilities/Button/Button';
 
-const UniformCard = ({ uniform, onViewDetails }) => {
+const ProductCards = ({ uniform, onViewDetails }) => {
   return (
     <div className="border rounded-lg shadow-lg p-4 bg-gray-100">
       <img
@@ -27,7 +27,7 @@ const UniformCard = ({ uniform, onViewDetails }) => {
   );
 };
 
-function ListUniforms() {
+function ProductList() {
   const [uniforms, setUniforms] = useState([]);
   const [selectedUniform, setSelectedUniform] = useState(null);
   const [mainImage, setMainImage] = useState('');
@@ -72,7 +72,7 @@ function ListUniforms() {
     <div className="p-10">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12">
         {uniforms.map((uniform) => (
-          <UniformCard key={uniform.id} uniform={uniform} onViewDetails={handleViewDetails} />
+          <ProductCards key={uniform.id} uniform={uniform} onViewDetails={handleViewDetails} />
         ))}
       </div>
 
@@ -143,4 +143,4 @@ function ListUniforms() {
   );
 }
 
-export default ListUniforms;
+export default ProductList;

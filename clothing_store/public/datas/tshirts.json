@@ -1,0 +1,103 @@
+[
+    {
+      "id": 1,
+      "title": "Printed T-Shirt",
+      "image": "/Image/t-shirt/tShirt1.jpg",
+      "price": 500,
+      "availability": "In Stock",
+      "rating": 4.5,
+      "description": "A classic school uniform made with durable and comfortable fabric, perfect for daily wear.",
+      "sizes": ["S", "M", "L", "XL"]
+    },
+    {
+      "id": 2,
+      "title": "Printed T-Shirt",
+      "image": "/Image/t-shirt/tShirt2.jpg",
+      "price": 700,
+      "availability": "Out of Stock",
+      "rating": 4.2,
+      "description": "Lightweight and breathable sports uniform designed for maximum comfort during physical activities.",
+      "sizes": ["M", "L", "XL"]
+    },
+    {
+      "id": 3,
+      "title": "Printed T-Shirt",
+      "image": "/Image/t-shirt/tShirt3.jpg",
+      "price": 600,
+      "availability": "In Stock",
+      "rating": 4.0,
+      "description": "Stylish casual uniform suitable for both formal and informal occasions.",
+      "sizes": ["S", "M", "L"]
+    },
+    {
+      "id": 4,
+      "title": "Printed T-Shirt",
+      "image": "/Image/t-shirt/tShirt4.jpg",
+      "price": 800,
+      "availability": "In Stock",
+      "rating": 4.8,
+      "description": "Warm and cozy winter uniform designed to provide comfort during cold seasons.",
+      "sizes": ["M", "L", "XL", "XXL"]
+    },
+    {
+      "id": 5,
+      "title": "Printed T-Shirt",
+      "image": "/Image/t-shirt/tShirt5.jpg",
+      "price": 550,
+      "availability": "Out of Stock",
+      "rating": 4.1,
+      "description": "Light and airy summer uniform designed to keep you cool in hot weather.",
+      "sizes": ["S", "M", "L", "XL"]
+    },
+    {
+      "id": 6,
+      "title": "Printed T-Shirt",
+      "image": "/Image/t-shirt/tShirt6.jpg",
+      "price": 750,
+      "availability": "In Stock",
+      "rating": 4.4,
+      "description": "Elegant formal uniform crafted for business and formal events.",
+      "sizes": ["S", "M", "L", "XL"]
+    },
+    {
+      "id": 7,
+      "title": "Printed T-Shirt",
+      "image": "/Image/t-shirt/tShirt7.jpg",
+      "price": 650,
+      "availability": "Out of Stock",
+      "rating": 4.3,
+      "description": "Protective lab uniform designed for safety and ease of movement in laboratory environments.",
+      "sizes": ["M", "L", "XL"]
+    },
+    {
+      "id": 8,
+      "title": "Printed T-Shirt",
+      "image": "/Image/t-shirt/tShirt8.jpg",
+      "price": 900,
+      "availability": "In Stock",
+      "rating": 4.7,
+      "description": "Smart and professional event uniform suitable for special functions and corporate events.",
+      "sizes": ["S", "M", "L", "XL", "XXL"]
+    },
+    {
+        "id": 9,
+        "title": "Printed T-Shirt",
+        "image": "/Image/t-shirt/tShirt9.jpg",
+        "price": 650,
+        "availability": "Out of Stock",
+        "rating": 4.3,
+        "description": "Protective lab uniform designed for safety and ease of movement in laboratory environments.",
+        "sizes": ["M", "L", "XL"]
+      },
+      {
+        "id": 10,
+        "title": "Printed T-Shirt",
+        "image": "/Image/t-shirt/tShirt10.jpg",
+        "price": 900,
+        "availability": "In Stock",
+        "rating": 4.7,
+        "description": "Smart and professional event uniform suitable for special functions and corporate events.",
+        "sizes": ["S", "M", "L", "XL", "XXL"]
+      }
+  ]
+  
