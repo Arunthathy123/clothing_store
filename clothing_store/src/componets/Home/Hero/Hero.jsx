@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Button from "../../CommonUtilities/Button/Button";
-import { usePopup } from '../../../context/PopupContext';
+import { usePopup } from '../../../context/PopupProvider';
 const Hero = () => {
   const { handleOrderPopup } = usePopup();
   const [imageList, setImageList] = useState([]);

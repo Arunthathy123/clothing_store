@@ -1,18 +1,17 @@
 import React from 'react'
 import Header from '../../componets/CommonUtilities/Header/Header'
 import Footer from '../../componets/CommonUtilities/Footer/Footer'
-import Banner from '../../componets/Contacts/Banner/Banner'
-import ContactInfo from '../../componets/Contacts/ContactInfo/ContactInfo'
+// import ListUniforms from '../../componets/Uniform/ListUniforms'
+import ProductList from '../../componets/TendingProducts/ProductList'
 
-function Contact() {
+function ListProductsByCategory() {
   return (
     <div>
       <Header />
-      <Banner />
-      <ContactInfo />
+      <ProductList />
       <Footer />
     </div>
   )
 }
 
-export default Contact
+export default ListProductsByCategory

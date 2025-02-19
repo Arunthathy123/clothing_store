@@ -3,15 +3,15 @@ import { IoMdSearch } from "react-icons/io";
 import { FaCartShopping } from "react-icons/fa6";
 import { FaCaretDown } from "react-icons/fa";
 import Button from "../Button/Button";
-import { usePopup } from '../../../context/PopupContext';
+import { usePopup } from '../../../context/PopupProvider';
 
 const Menu = [
   { id: 1, name: "Home", link: "/Home" },
-  { id: 2, name: "Top Rated", link: "/#services" },
+  { id: 2, name: "Top Rated", link: "#" },
 ];
 
 const DropdownLinks = [
-  { id: 1, name: "Uniforms", link: "/#" },
+  { id: 1, name: "Uniforms", link: "/Uniform" },
   { id: 2, name: "T-Shirts", link: "/#" },
   { id: 3, name: "Caps", link: "/#" },
 ];

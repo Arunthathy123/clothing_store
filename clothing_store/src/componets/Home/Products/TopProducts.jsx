@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { FaStar } from 'react-icons/fa';
 import Button from '../../CommonUtilities/Button/Button';
-import { usePopup } from '../../../context/PopupContext';
+import { usePopup } from '../../../context/PopupProvider';
 
 const TopProducts = () => {
   const [products, setProducts] = useState([]);
