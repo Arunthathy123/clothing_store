@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Button from "../../CommonUtilities/Button/Button";
+import React, { useEffect, useState } from 'react';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import Button from '../../CommonUtilities/Button/Button';
 import { usePopup } from '../../../context/PopupProvider';
+import { JSON_FILES } from '../../../utils/constant';
 const Hero = () => {
   const { handleOrderPopup } = usePopup();
   const [imageList, setImageList] = useState([]);
@@ -11,11 +12,11 @@ const Hero = () => {
   useEffect(() => {
     const fetchBannerImages = async () => {
       try {
-        const response = await fetch("/datas/BannerList.json");
+        const response = await fetch(JSON_FILES.BANNER_LIST);
         const data = await response.json();
         setImageList(data);
       } catch (error) {
-        console.error("Error fetching images:", error);
+        console.error('Failed to fetch banner images:', error);
       }
     };
 
@@ -31,21 +32,21 @@ const Hero = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 4000,
-    cssEase: "ease-in-out",
+    cssEase: 'ease-in-out',
     pauseOnHover: false,
     pauseOnFocus: true,
   };
 
   return (
     <section
-      className="relative overflow-hidden w-full h-auto sm:h-[500px] md:h-[550px] flex justify-center items-center text-white duration-200"
+      className="relative overflow-hidden w-full h-auto sm:h-[500px] md:h-[550px] flex justify-center items-center text-white transition duration-200"
       style={{
         backgroundImage: `url('/Image/banner/bannerBg.png')`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
       }}
     >
-      <div className="h-[700px] w-[700px] bg-primary/40 absolute right-0 rounded-3xl rotate-45 opacity-30" />
+      <div className="absolute right-0 w-[700px] h-[700px] bg-primary/40 rounded-3xl rotate-45 opacity-30" />
 
       <div className="w-full h-full mt-10 md:mt-0 md:p-10">
         <Slider {...sliderSettings}>
@@ -57,7 +58,7 @@ const Hero = () => {
                     data-aos="zoom-out"
                     data-aos-duration="500"
                     data-aos-once="true"
-                    className="text-4xl sm:text-5xl lg:text-5xl font-bold text-[#005c86] leading-relaxed"
+                    className="text-4xl sm:text-5xl font-bold text-[#005c86] leading-relaxed"
                   >
                     {title}
                   </h1>
@@ -72,8 +73,8 @@ const Hero = () => {
                   <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
                     <Button
                       label="Order Now"
-                      onClick={() => handleOrderPopup()}
-                      className="whitespace-nowrap bg-gradient-to-r from-blue-800 to-blue-500 w-auto md:w-full lg:w-1/2 xl:w-1/4 mt-6 hover:scale-105 duration-200 text-xl text-white py-2 px-4 rounded-full"
+                      onClick={handleOrderPopup}
+                      className="bg-gradient-to-r from-blue-800 to-blue-500 text-white text-xl py-2 px-4 rounded-full mt-6 hover:scale-105 transition duration-200 w-auto md:w-full lg:w-1/2 xl:w-1/4"
                     />
                   </div>
                 </div>
@@ -81,7 +82,7 @@ const Hero = () => {
                 <div
                   data-aos="zoom-in"
                   data-aos-once="true"
-                  className="order-1 sm:order-2 flex justify-center items-center"
+                  className="flex justify-center items-center order-1 sm:order-2"
                 >
                   <img
                     src={img}

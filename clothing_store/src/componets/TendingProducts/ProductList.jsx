@@ -2,39 +2,35 @@ import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import Button from '../CommonUtilities/Button/Button';
+import { JSON_FILES } from '../../utils/constant';
 
 function ProductList() {
   const [uniforms, setUniforms] = useState([]);
   const [filteredUniforms, setFilteredUniforms] = useState([]);
   const [selectedUniform, setSelectedUniform] = useState(null);
   const [mainImage, setMainImage] = useState('');
+  const [loading, setLoading] = useState(true);
 
   const location = useLocation();
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('/datas/ProductList.json');
+        const response = await fetch(JSON_FILES.PRODUCT_LIST);
         const data = await response.json();
         setUniforms(data);
+        setLoading(false);
       } catch (error) {
         console.error('Error fetching data:', error);
-      }
+      } 
     };
     fetchData();
   }, []);
 
-  // This effect triggers when data is loaded or URL changes
   useEffect(() => {
-    const queryParams = new URLSearchParams(location.search);
-    const category = queryParams.get('category');
-
-    if (category) {
-      const filtered = uniforms.filter((item) => item.category === category);
-      setFilteredUniforms(filtered);
-    } else {
-      setFilteredUniforms(uniforms);
-    }
+    const category = new URLSearchParams(location.search).get('category');
+    const filteredData = category ? uniforms.filter(({ category: c }) => c === category) : uniforms;
+    setFilteredUniforms(filteredData);
   }, [uniforms, location.search]);
 
   const handleViewDetails = (uniform) => {
@@ -60,16 +56,16 @@ function ProductList() {
     }
   };
 
+  if (loading) {
+    return <div className="flex justify-center items-center h-screen text-xl">Loading products...</div>;
+  }
+
   return (
     <div className="p-10">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12">
         {filteredUniforms.map((uniform) => (
           <div key={uniform.id} className="border rounded-lg shadow-lg p-4 bg-gray-100">
-            <img
-              src={uniform.image}
-              alt={uniform.title}
-              className="max-h-72 w-full object-contain mb-6"
-            />
+            <img src={uniform.image} alt={uniform.title} className="max-h-72 w-full object-contain mb-6" />
             <div className="flex flex-col gap-2">
               <h3 className="text-lg font-semibold">{uniform.title}</h3>
               <p className="text-gray-700">Price: ₹{uniform.price}</p>
@@ -106,19 +102,13 @@ function ProductList() {
                     key={index}
                     src={img}
                     alt={`Additional view ${index}`}
-                    className={`w-16 h-16 cursor-pointer object-cover rounded-md border ${
-                      mainImage === img ? 'border-blue-500' : 'border-gray-300'
-                    }`}
+                    className={`w-16 h-16 cursor-pointer object-cover rounded-md border ${mainImage === img ? 'border-blue-500' : 'border-gray-300'}`}
                     onClick={() => setMainImage(img)}
                   />
                 ))}
               </div>
               <div className="flex-1">
-                <img
-                  src={mainImage}
-                  alt={selectedUniform.title}
-                  className="w-full h-60 object-contain rounded-md"
-                />
+                <img src={mainImage} alt={selectedUniform.title} className="w-full h-60 object-contain rounded-md" />
               </div>
             </div>
 
@@ -131,17 +121,12 @@ function ProductList() {
               <strong>Description:</strong> {selectedUniform.description}
             </p>
             <p className="text-gray-600">
-              <strong>Available Sizes:</strong>{' '}
-              {Array.isArray(selectedUniform.sizes) ? selectedUniform.sizes.join(', ') : 'N/A'}
+              <strong>Available Sizes:</strong> {Array.isArray(selectedUniform.sizes) ? selectedUniform.sizes.join(', ') : 'N/A'}
             </p>
 
             <Button
               label="Order Now"
-              className={`px-4 py-1 rounded mt-6 ${
-                selectedUniform.availability === 'Out of Stock'
-                  ? 'bg-gray-400 cursor-not-allowed'
-                  : 'bg-green-500 hover:bg-green-600 text-white'
-              }`}
+              className={`px-4 py-1 rounded mt-6 ${selectedUniform.availability === 'Out of Stock' ? 'bg-gray-400 cursor-not-allowed' : 'bg-green-500 hover:bg-green-600 text-white'}`}
               onClick={handleOrderNow}
             />
           </div>

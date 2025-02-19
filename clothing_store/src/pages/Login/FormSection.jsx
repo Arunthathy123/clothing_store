@@ -61,8 +61,11 @@ function FormSection() {
           
         
       </InputField>
+      <div className='mt-4 flex items-center justify-center'>
+      <SubmitButton label="Login" className="w-1/2 mt-6 bg-blue-600 text-white py-2 rounded-lg hover:bg-indigo-700 transition" />
 
-      <SubmitButton label="Login" className="w-full mt-6 bg-blue-800 text-white py-2 rounded-lg hover:bg-indigo-700 transition" />
+      </div>
+
     </form>
   );
 }

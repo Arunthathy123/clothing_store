@@ -1,12 +1,13 @@
-
 import React from 'react';
 
-function InputField({ id, label, type, value, onChange, onBlur, placeholder, error, className, children, labelClassName }) {
+function InputField({ id, label, type = 'text', value, onChange, onBlur, placeholder, error, className = '', children, labelClassName = '' }) {
   return (
     <div className="relative">
-      <label htmlFor={id} className={labelClassName}>
-        {label}
-      </label>
+      {label && (
+        <label htmlFor={id} className={labelClassName}>
+          {label}
+        </label>
+      )}
       <input
         type={type}
         id={id}
@@ -18,11 +19,7 @@ function InputField({ id, label, type, value, onChange, onBlur, placeholder, err
         placeholder={placeholder}
       />
       {children}
-      {error && (
-        <div className="text-sm text-red-500 mt-2">
-          {error}
-        </div>
-      )}
+      {error && <div className="text-sm text-red-500 mt-2">{error}</div>}
     </div>
   );
 }
