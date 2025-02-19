@@ -4,6 +4,8 @@ import * as Yup from 'yup';
 import InputField from '../../componets/CommonUtilities/InputFields/InputField';
 import SubmitButton from '../../componets/CommonUtilities/Button/Button'; 
 import { useNavigate } from 'react-router-dom';
+import Button from '../../componets/CommonUtilities/Button/Button';
+import {  FaRegEye } from 'react-icons/fa';
 
 function FormSection() {
   const [passwordVisible, setPasswordVisible] = useState(false);
@@ -24,50 +26,44 @@ function FormSection() {
   });
 
   return (
-    <div>
-      <form onSubmit={formik.handleSubmit} className="space-y-4">
-        <InputField
-          id="username"
-          label="Username"
-          type="text"
-          value={formik.values.username}
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          placeholder="Enter your username"
-          error={formik.touched.username && formik.errors.username}
+    <form onSubmit={formik.handleSubmit} className="space-y-6">
+      <InputField
+      labelClassName="block text-sm font-medium text-gray-100 mb-3"
+        id="username"
+        label="Username"
+        type="text"
+        value={formik.values.username}
+        onChange={formik.handleChange}
+        onBlur={formik.handleBlur}
+        placeholder="Enter your username"
+        error={formik.touched.username && formik.errors.username}
+        className="block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+      />
+
+      <InputField
+      labelClassName="block text-sm font-medium text-gray-100 mb-3"
+        id="password"
+        label="Password"
+        type={passwordVisible ? 'text' : 'password'}
+        value={formik.values.password}
+        onChange={formik.handleChange}
+        onBlur={formik.handleBlur}
+        placeholder="Enter your password"
+        error={formik.touched.password && formik.errors.password}
+        className="block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm  focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm relative"
+      >
+        <Button
+        label={passwordVisible ? <FaRegEye className="text-xl " /> : <FaRegEye className="text-xl " />}
+          type="button"
+          onClick={() => setPasswordVisible(!passwordVisible)}
+          className="absolute inset-y-14 right-0 flex items-center pr-3  text-gray-600 focus:outline-none"
         />
+          
+        
+      </InputField>
 
-        <div>
-          <label htmlFor="password" className="block text-sm font-medium text-gray-700">
-            Password
-          </label>
-          <div className="relative">
-            <input
-              type={passwordVisible ? 'text' : 'password'}
-              id="password"
-              name="password"
-              value={formik.values.password}
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md"
-              placeholder="Enter your password"
-            />
-            <button
-              type="button"
-              onClick={() => setPasswordVisible(!passwordVisible)}
-              className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-600"
-            >
-              {passwordVisible ? 'Hide' : 'Show'}
-            </button>
-          </div>
-          {formik.touched.password && formik.errors.password && (
-            <div className="text-sm text-red-600">{formik.errors.password}</div>
-          )}
-        </div>
-
-        <SubmitButton label="Login" />
-      </form>
-    </div>
+      <SubmitButton label="Login" className="w-full mt-6 bg-blue-800 text-white py-2 rounded-lg hover:bg-indigo-700 transition" />
+    </form>
   );
 }
 

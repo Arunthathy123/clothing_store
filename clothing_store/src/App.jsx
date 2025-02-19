@@ -5,6 +5,7 @@ import Index from "./pages/Home/Index"
 import Contact from "./pages/Contact/Contact"
 import { PopupProvider } from "./context/PopupProvider"
 import ListProductsByCategory from "./pages/ProductDetails/ListProductsByCategory"
+import TopRated from "./pages/TopRated/TopRated"
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<Login />}/>
         <Route path="/Home" element={<Index />} />
         <Route path="/Contact" element={<Contact />} />
+        <Route path="/TopRated" element={<TopRated />} />
         <Route path="/ProductList" element={<ListProductsByCategory />} />
         
       </Routes>

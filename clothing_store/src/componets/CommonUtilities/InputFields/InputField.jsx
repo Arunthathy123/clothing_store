@@ -1,9 +1,10 @@
+
 import React from 'react';
 
-function InputField({ id, label, type, value, onChange, onBlur, placeholder, error, className }) {
+function InputField({ id, label, type, value, onChange, onBlur, placeholder, error, className, children, labelClassName }) {
   return (
-    <div>
-      <label htmlFor={id} className="block text-sm font-medium text-gray-700">
+    <div className="relative">
+      <label htmlFor={id} className={labelClassName}>
         {label}
       </label>
       <input
@@ -16,8 +17,9 @@ function InputField({ id, label, type, value, onChange, onBlur, placeholder, err
         className={className}
         placeholder={placeholder}
       />
+      {children}
       {error && (
-        <div className="text-sm text-red-600">
+        <div className="text-sm text-red-500 mt-2">
           {error}
         </div>
       )}

@@ -3,20 +3,17 @@ import FormSection from './FormSection';
 
 function Login() {
   return (
-    <div className="h-screen flex justify-center items-center">
-      <div className="flex w-full max-w-4xl border border-gray-900">
-        <div className="w-1/2 p-8">
-          <FormSection />
-        </div>
+    <div className="relative h-screen w-screen flex justify-center items-center bg-cover bg-center" style={{ backgroundImage: 'url("/Image/banner/LoginBanner.png")' }}>
+      {/* Black Overlay */}
+      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
-        {/* Right side: Image */}
-        <div className="w-1/2 bg-cover bg-center" style={{ backgroundImage: 'url("your-image-url.jpg")' }}>
-          {/* You can optionally add a dark overlay here */}
-        </div>
+      {/* Glassmorphism Card */}
+      <div className="relative w-full max-w-md p-8 rounded-lg shadow-lg backdrop-blur-md bg-black bg-opacity-40 border border-gray-700">
+        <h2 className="text-3xl font-semibold text-white mb-6 text-center">Login</h2>
+        <FormSection />
       </div>
     </div>
   );
 }
 
 export default Login;
-

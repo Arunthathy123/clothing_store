@@ -1,5 +1,6 @@
 [
     {
+        "id": "1",
         "img": "/Image/products/lowyer1.jpg",
         "title": "Lowyer",
         "description": "Lorem ipsum dolor.",
@@ -10,6 +11,7 @@
         "rating": "4.5"
         },
         {
+        "id": "2",
         "img": "/Image/products/nurse2.jpg",
         "title": "Worker",
         "description": "Lorem ipsum dolor.",
@@ -20,6 +22,7 @@
         "rating": "5"
         },
         {
+        "id": "3",
         "img": "/Image/products/nurse4.jpg",
         "title": "Nurse",
         "description": "Lorem ipsum dolor.",
@@ -30,6 +33,7 @@
         "rating": "4"
         },
         {
+        "id": "4",
         "img": "/Image/products/outFit1.jpg",
         "title": "Girls Uniform Outfit",
         "description": "Lorem ipsum dolor.",
@@ -40,6 +44,7 @@
         "rating": "5"
         },
         {
+        "id": "5",
         "img": "/Image/products/outFit6.jpg",
         "title": "Sheff",
         "description": "Lorem ipsum dolor.",
@@ -48,7 +53,63 @@
         "price": 899,
         "availability": "In Stock",
         "rating": "4.5"
-        }
+        },
+        {
+            "id": "6",
+            "img": "/Image/skirts/skirt1.jpg",
+            "title": "Lowyer",
+            "description": "Lorem ipsum dolor.",
+            "material": "Cotton blend",
+            "size": ["S", "M", "L", "XL"],
+            "price": 1499,
+            "availability": "In Stock",
+            "rating": "4.5"
+            },
+            {
+            "id": "7",
+            "img": "/Image/outfit/outFit3.jpg",
+            "title": "Worker",
+            "description": "Lorem ipsum dolor.",
+            "material": "Polyester",
+            "size": ["XS", "S", "M", "L"],
+            "price": 1099,
+            "availability": "In Stock",
+            "rating": "5"
+            },
+            {
+            "id": "8",
+            "img": "/Image/caps/cap8.jpg",
+            "title": "Nurse",
+            "description": "Lorem ipsum dolor.",
+            "material": "Plastic Frame",
+            "size": ["Free Size"],
+            "price": 799,
+            "availability": "Limited Stock",
+            "rating": "4"
+            },
+            {
+            "id": "9",
+            "img": "/Image/t-shirt/tShirt4.jpg",
+            "title": "Girls Uniform Outfit",
+            "description": "Lorem ipsum dolor.",
+            "material": "100% Cotton",
+            "size": ["M", "L", "XL", "XXL"],
+            "price": 999,
+            "availability": "In Stock",
+            "rating": "5"
+            },
+            {
+            "id": "10",
+            "img": "/Image/caps/cap5.jpg",
+            "title": "Sheff",
+            "description": "Lorem ipsum dolor.",
+            "material": "Cotton blend",
+            "size": ["S", "M", "L"],
+            "price": 899,
+            "availability": "In Stock",
+            "rating": "4.5"
+            }
+        
     ]
     
     

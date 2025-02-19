@@ -25,7 +25,7 @@ const AddBanner = () => {
           </div>
 
           <div className="flex flex-col justify-center gap-6">
-            <h1 data-aos="fade-up" className="text-3xl sm:text-4xl font-bold">
+            <h1 data-aos="fade-up" className="text-3xl sm:text-4xl font-bold text-gray-900">
               Winter Sale Up to 50% Off
             </h1>
             <p data-aos="fade-up" className="text-sm text-gray-500 leading-relaxed">
@@ -36,7 +36,7 @@ const AddBanner = () => {
               {features.map((feature, index) => (
                 <div key={index} data-aos="fade-up" className="flex items-center gap-4">
                   {feature.icon}
-                  <p className="text-base font-medium">{feature.text}</p>
+                  <p className="text-base font-medium text-gray-900">{feature.text}</p>
                 </div>
               ))}
             </div>

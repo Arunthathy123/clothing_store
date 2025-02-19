@@ -4,6 +4,8 @@ import Button from "../../CommonUtilities/Button/Button";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
+  const [visibleCount, setVisibleCount] = useState(5);
+  const [expanded, setExpanded] = useState(false); // Track if "View More" is clicked
 
   useEffect(() => {
     fetch("/datas/products.json")
@@ -11,6 +13,15 @@ const Products = () => {
       .then((data) => setProducts(data))
       .catch((error) => console.error("Error fetching products:", error));
   }, []);
+
+  const toggleView = () => {
+    if (expanded) {
+      setVisibleCount(5); // Show only 5 products
+    } else {
+      setVisibleCount(products.length); // Show all products
+    }
+    setExpanded(!expanded);
+  };
 
   return (
     <div className="mt-14 mb-12 p-10">
@@ -30,7 +41,7 @@ const Products = () => {
 
         <div>
           <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 place-items-center gap-5">
-            {products.map((data) => (
+            {products.slice(0, visibleCount).map((data) => (
               <div
                 data-aos="fade-up"
                 data-aos-delay={data.aosDelay}
@@ -40,17 +51,17 @@ const Products = () => {
                 <img
                   src={data.img}
                   alt={data.title}
-                  className="h-[300px] w-[400px]  object-fill rounded-lg "
+                  className="h-[300px] w-[400px] object-fill rounded-lg"
                 />
 
                 <div className="flex flex-col gap-2">
-                  
-                  <h3 className="font-semibold"> {data.price} ₹</h3>
-                  <h3 className="font-semibold"> {data.title} </h3>
+                  <h3 className="font-semibold">₹ {data.price}</h3>
+                  <h3 className="font-semibold">{data.title}</h3>
                   <p className="text-sm text-gray-600">{data.description}</p>
-                  <p className="text-sm text-gray-600"><span className="text-black text-base">material :</span> {data.material}</p>
-                  {/* <p className="text-sm text-gray-600"><span className="text-black text-base">Available Size : </span> {data.size}</p> */}
-                  
+                  <p className="text-sm text-gray-600">
+                    <span className="text-gray-950 text-base">Material:</span> {data.material}
+                  </p>
+
                   <div className="flex items-center gap-1">
                     <FaStar className="text-yellow-400" />
                     <span>{data.rating}</span>
@@ -60,9 +71,15 @@ const Products = () => {
             ))}
           </div>
 
-          <div className="flex justify-center">
-            <Button className="text-center mt-10 cursor-pointer bg-blue-600 text-white py-1 px-5 rounded-md" label="View All" />
-          </div>
+          {products.length > 5 && (
+            <div className="flex justify-center">
+              <Button
+                className="text-center mt-10 cursor-pointer bg-blue-600 text-white py-1 px-5 rounded-md"
+                label={expanded ? "View Less" : "View More"}
+                onClick={toggleView}
+              />
+            </div>
+          )}
         </div>
       </div>
     </div>

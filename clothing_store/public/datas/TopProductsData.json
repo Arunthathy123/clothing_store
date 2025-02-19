@@ -5,16 +5,17 @@
       "title": "Stylish Cap",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.",
       "price": 150,
-      "inStock": true
+      "inStock": true,
+      "category":"cap"
     },
     {
       "id": 2,
-      
       "img": "/Image/topProducts/outFit3.jpg",
       "title": "Uniform Outfit",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempor incididunt ut labore.",
       "price": 550,
-      "inStock": false
+      "inStock": false,
+      "category":"uniform"
 
     },
     {
@@ -23,7 +24,8 @@
       "title": "Printed T-Shirt",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ullamco laboris nisi.",
       "price": 250,
-      "inStock": true
+      "inStock": true,
+      "category":"t-shirt"
 
     }
     

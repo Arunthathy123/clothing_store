@@ -31,54 +31,102 @@ const ContactInfo = () => {
         setTimeout(() => setFormSubmitted(false), 3000);
     };
 
+    const GOOGLE_MAPS_API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
+    console.log("googleMapsApiKey-->", GOOGLE_MAPS_API_KEY)
+    const mapSrc = `https://www.google.com/maps/embed/v1/place?key=${GOOGLE_MAPS_API_KEY}&q=GWJH%2BQC+Thiruvananthapuram,+Kerala/`;
+
     return (
-        <div className=" mx-auto px-6 lg:px-32 py-10">
-        <div className="text-center mb-20">
-            <h3 className="text-3xl font-semibold text-gray-800">Get In Touch</h3>
-            <p className="text-gray-600 mt-2">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-        </div>
+        <div className="mx-auto px-6 lg:px-32 py-10">
+            <div className="text-center mb-20">
+                <h3 className="text-3xl font-semibold text-gray-800">Get In Touch</h3>
+                <p className="text-gray-600 mt-2">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+            </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
-            {contactCards.map((card, index) => {
-            const isBlueBg = index % 2 !== 0;
-            return (
-                <div key={card.id} className={`p-6 rounded-lg shadow-md flex flex-col items-center ${isBlueBg ? "bg-blue-950 text-white" : "bg-gray-100 text-gray-800"}`}>
-                <div className="mb-4">{card.icon}</div>
-                <h4 className={`text-xl font-semibold mb-2 ${isBlueBg ? "text-white" : "text-gray-800"}`}>{card.title}</h4>
-                <p className={`${isBlueBg ? "text-gray-300" : "text-gray-600"}`}>{card.description}</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+                {contactCards.map((card, index) => {
+                    const isBlueBg = index % 2 !== 0;
+                    return (
+                        <div
+                            key={card.id}
+                            className={`p-6 rounded-lg shadow-md flex flex-col items-center ${
+                                isBlueBg ? "bg-blue-950 text-white" : "bg-gray-100 text-gray-800"
+                            }`}
+                        >
+                            <div className="mb-4">{card.icon}</div>
+                            <h4 className={`text-xl font-semibold mb-2 ${isBlueBg ? "text-white" : "text-gray-800"}`}>
+                                {card.title}
+                            </h4>
+                            <p className={`${isBlueBg ? "text-gray-300" : "text-gray-600"}`}>{card.description}</p>
+                        </div>
+                    );
+                })}
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div className="h-64 lg:h-96 rounded-lg overflow-hidden">
+                    <iframe
+                        title="Google Map"
+                        className="w-full h-full"
+                        src={mapSrc}
+                        allowFullScreen
+                        loading="lazy"
+                    ></iframe>
                 </div>
-            );
-            })}
-        </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div className="h-64 lg:h-96 rounded-lg overflow-hidden">
-            <iframe
-                title="Google Map"
-                className="w-full h-full"
-                src={`https://www.google.com/maps/embed/v1/place?key=YOUR_GOOGLE_MAPS_API_KEY&q=Melbourne,VIC,Australia`}
-                allowFullScreen
-                loading="lazy"
-            ></iframe>
-            </div>
-
-            <div className="bg-gray-50 p-6 rounded-lg shadow-lg">
-                {formSubmitted && <div className="mb-4 p-3 bg-green-100 text-green-700 rounded-md">Thank you! Your message has been sent.</div>}
-                
-                <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={handleSubmit}>
-                    {({ values, handleChange, handleBlur, errors, touched }) => (
-                    <Form className="space-y-4">
-                        <InputField id="name" label="Name" type="text" value={values.name} onChange={handleChange} onBlur={handleBlur} placeholder="Your Name" error={touched.name && errors.name} className="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
-                        <InputField id="email" label="Email" type="email" value={values.email} onChange={handleChange} onBlur={handleBlur} placeholder="Your Email" error={touched.email && errors.email} className="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
-                        <TextArea id="message" label="Message" value={values.message} onChange={handleChange} onBlur={handleBlur} placeholder="Your Message" error={touched.message && errors.message}    />
-                        <Button label="Send Message" className="w-full bg-blue-800 text-white py-2 rounded-lg hover:bg-blue-700 transition" />
-                    </Form>
+                <div className="bg-gray-50 p-6 rounded-lg shadow-lg">
+                    {formSubmitted && (
+                        <div className="mb-4 p-3 bg-green-100 text-green-700 rounded-md">
+                            Thank you! Your message has been sent.
+                        </div>
                     )}
-                </Formik>
+
+                    <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={handleSubmit}>
+                        {({ values, handleChange, handleBlur, errors, touched }) => (
+                            <Form className="space-y-4">
+                                <InputField
+                                    labelClassName="block text-sm font-medium text-gray-700 mb-3"
+                                    id="name"
+                                    label="Name"
+                                    type="text"
+                                    value={values.name}
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    placeholder="Your Name"
+                                    error={touched.name && errors.name}
+                                    className="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                />
+                                <InputField
+                                    labelClassName="block text-sm font-medium text-gray-700 mb-3"
+                                    id="email"
+                                    label="Email"
+                                    type="email"
+                                    value={values.email}
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    placeholder="Your Email"
+                                    error={touched.email && errors.email}
+                                    className="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                />
+                                <TextArea
+                                    id="message"
+                                    label="Message"
+                                    value={values.message}
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    placeholder="Your Message"
+                                    error={touched.message && errors.message}
+                                />
+                                <Button
+                                    label="Send Message"
+                                    className="w-full bg-blue-800 text-white py-2 rounded-lg hover:bg-blue-700 transition"
+                                />
+                            </Form>
+                        )}
+                    </Formik>
+                </div>
             </div>
-        </div>
         </div>
     );
 };

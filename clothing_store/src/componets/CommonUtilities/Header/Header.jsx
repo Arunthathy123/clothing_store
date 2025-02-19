@@ -7,7 +7,7 @@ import { usePopup } from '../../../context/PopupProvider';
 
 const Menu = [
   { id: 1, name: "Home", link: "/Home" },
-  { id: 2, name: "Top Rated", link: "#" },
+  { id: 2, name: "Top Rated", link: "/TopRated" },
 ];
 
 const DropdownLinks = [

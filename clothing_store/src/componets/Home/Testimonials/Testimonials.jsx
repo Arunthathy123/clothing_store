@@ -53,11 +53,11 @@ const Testimonials = () => {
   return (
     <section className="py-10 mb-10">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-10 max-w-2xl mx-auto">
-          <p data-aos="fade-up" className="text-sm text-primary">
+        <div className="text-center mb-10 max-w-2xl mx-auto flex flex-col gap-3">
+          <p data-aos="fade-up" className="text-sm text-gray-900">
             What our customers are saying
           </p>
-          <h2 data-aos="fade-up" className="text-3xl font-bold">
+          <h2 data-aos="fade-up" className="text-3xl font-bold text-gray-900">
             Testimonials
           </h2>
           <p data-aos="fade-up" className="text-xs text-gray-400">
@@ -76,8 +76,8 @@ const Testimonials = () => {
                     className="rounded-full w-20 h-20 mb-4"
                   />
                   <p className="text-xs text-gray-500 mb-4 mt-4 text-start">{text}</p>
-                  <h3 className="text-xl font-bold text-black/80">{name}</h3>
-                  <span className="absolute top-0 right-0 text-black/20 text-9xl font-serif">,,</span>
+                  <h3 className="text-xl font-bold text-gray-950/80">{name}</h3>
+                  <span className="absolute top-0 right-0 text-gray-950/20 text-9xl font-serif">,,</span>
                 </div>
               </div>
             ))}
