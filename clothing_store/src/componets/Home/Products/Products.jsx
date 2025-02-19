@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { FaStar } from "react-icons/fa6";
-import Button from "../Button/Button";
+import Button from "../../CommonUtilities/Button/Button";
 
 const Products = () => {
   const [products, setProducts] = useState([]);

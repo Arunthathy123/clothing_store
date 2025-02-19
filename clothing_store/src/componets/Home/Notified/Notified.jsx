@@ -2,7 +2,7 @@
 
 import React from "react";
 import Banner from "/Image/banner/notifybanner.jpg";
-import InputFeild from "../InputFields/InputField"
+import InputFeild from "../../CommonUtilities/InputFields/InputField"
 const BannerImg = {
   backgroundImage: `url(${Banner})`,
   backgroundPosition: "center",

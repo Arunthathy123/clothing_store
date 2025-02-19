@@ -3,9 +3,10 @@ import { IoMdSearch } from "react-icons/io";
 import { FaCartShopping } from "react-icons/fa6";
 import { FaCaretDown } from "react-icons/fa";
 import Button from "../Button/Button";
+import { usePopup } from '../../../context/PopupContext';
 
 const Menu = [
-  { id: 1, name: "Home", link: "/#" },
+  { id: 1, name: "Home", link: "/Home" },
   { id: 2, name: "Top Rated", link: "/#services" },
 ];
 
@@ -15,7 +16,8 @@ const DropdownLinks = [
   { id: 3, name: "Caps", link: "/#" },
 ];
 
-const Header = ({ handleOrderPopup }) => {
+const Header = () => {
+  const { handleOrderPopup } = usePopup();
   return (
     <header className="shadow-md bg-white z-40 relative">
       <div className="bg-blue-600  px-10 py-5">

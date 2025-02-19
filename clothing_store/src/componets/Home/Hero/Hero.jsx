@@ -2,9 +2,10 @@ import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Button from "../Button/Button";
-
-const Hero = ({ handleOrderPopup }) => {
+import Button from "../../CommonUtilities/Button/Button";
+import { usePopup } from '../../../context/PopupContext';
+const Hero = () => {
+  const { handleOrderPopup } = usePopup();
   const [imageList, setImageList] = useState([]);
 
   useEffect(() => {
@@ -71,7 +72,7 @@ const Hero = ({ handleOrderPopup }) => {
                   <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
                     <Button
                       label="Order Now"
-                      onClick={handleOrderPopup}
+                      onClick={() => handleOrderPopup()}
                       className="whitespace-nowrap bg-gradient-to-r from-blue-800 to-blue-500 w-auto md:w-full lg:w-1/2 xl:w-1/4 mt-6 hover:scale-105 duration-200 text-xl text-white py-2 px-4 rounded-full"
                     />
                   </div>

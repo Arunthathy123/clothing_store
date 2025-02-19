@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { FaStar } from 'react-icons/fa';
-import Button from '../Button/Button';
+import Button from '../../CommonUtilities/Button/Button';
+import { usePopup } from '../../../context/PopupContext';
 
-const TopProducts = ({ handleOrderPopup }) => {
+const TopProducts = () => {
   const [products, setProducts] = useState([]);
+  const { handleOrderPopup } = usePopup();
 
   useEffect(() => {
     const fetchProducts = async () => {

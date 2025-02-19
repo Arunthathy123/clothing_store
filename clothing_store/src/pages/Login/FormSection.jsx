@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import InputField from '../../componets/InputFields/InputField';
-import SubmitButton from '../../componets/Button/Button'; 
+import InputField from '../../componets/CommonUtilities/InputFields/InputField';
+import SubmitButton from '../../componets/CommonUtilities/Button/Button'; 
 import { useNavigate } from 'react-router-dom';
 
 function FormSection() {
