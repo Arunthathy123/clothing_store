@@ -11,10 +11,11 @@ const Menu = [
 ];
 
 const DropdownLinks = [
-  { id: 1, name: "Uniforms", link: "/ProductList" },
-  { id: 2, name: "T-Shirts", link: "/#" },
-  { id: 3, name: "Caps", link: "/#" },
+  { id: 1, name: "Uniforms", link: "/ProductList?category=uniform" },
+  { id: 2, name: "T-Shirts", link: "/ProductList?category=t-shirt" },
+  { id: 3, name: "Caps", link: "/ProductList?category=cap" },
 ];
+
 
 const Header = () => {
   const { handleOrderPopup } = usePopup();

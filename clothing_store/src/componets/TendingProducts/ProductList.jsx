@@ -1,41 +1,20 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import Button from '../CommonUtilities/Button/Button';
 
-const ProductCards = ({ uniform, onViewDetails }) => {
-  return (
-    <div className="border rounded-lg shadow-lg p-4 bg-gray-100">
-      <img
-        src={uniform.image}
-        alt={uniform.title}
-        className="max-h-72 w-full object-contain mb-6"
-      />
-      <div className="flex flex-col gap-2">
-        <h3 className="text-lg font-semibold">{uniform.title}</h3>
-        <p className="text-gray-700">Price: ₹{uniform.price}</p>
-        <p className={uniform.availability === 'Out of Stock' ? 'text-red-600' : 'text-green-600'}>
-          <span className="text-sm">{uniform.availability}</span>
-        </p>
-        <p className="text-sm text-yellow-500">{uniform.rating} ★</p>
-        <Button
-          label="View Details"
-          className="mt-2 bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600"
-          onClick={() => onViewDetails(uniform)}
-        />
-      </div>
-    </div>
-  );
-};
-
 function ProductList() {
   const [uniforms, setUniforms] = useState([]);
+  const [filteredUniforms, setFilteredUniforms] = useState([]);
   const [selectedUniform, setSelectedUniform] = useState(null);
   const [mainImage, setMainImage] = useState('');
+
+  const location = useLocation();
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('/datas/uniforms.json');
+        const response = await fetch('/datas/ProductList.json');
         const data = await response.json();
         setUniforms(data);
       } catch (error) {
@@ -44,6 +23,19 @@ function ProductList() {
     };
     fetchData();
   }, []);
+
+  // This effect triggers when data is loaded or URL changes
+  useEffect(() => {
+    const queryParams = new URLSearchParams(location.search);
+    const category = queryParams.get('category');
+
+    if (category) {
+      const filtered = uniforms.filter((item) => item.category === category);
+      setFilteredUniforms(filtered);
+    } else {
+      setFilteredUniforms(uniforms);
+    }
+  }, [uniforms, location.search]);
 
   const handleViewDetails = (uniform) => {
     setSelectedUniform(uniform);
@@ -71,8 +63,27 @@ function ProductList() {
   return (
     <div className="p-10">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12">
-        {uniforms.map((uniform) => (
-          <ProductCards key={uniform.id} uniform={uniform} onViewDetails={handleViewDetails} />
+        {filteredUniforms.map((uniform) => (
+          <div key={uniform.id} className="border rounded-lg shadow-lg p-4 bg-gray-100">
+            <img
+              src={uniform.image}
+              alt={uniform.title}
+              className="max-h-72 w-full object-contain mb-6"
+            />
+            <div className="flex flex-col gap-2">
+              <h3 className="text-lg font-semibold">{uniform.title}</h3>
+              <p className="text-gray-700">Price: ₹{uniform.price}</p>
+              <p className={uniform.availability === 'Out of Stock' ? 'text-red-600' : 'text-green-600'}>
+                <span className="text-sm">{uniform.availability}</span>
+              </p>
+              <p className="text-sm text-yellow-500">{uniform.rating} ★</p>
+              <Button
+                label="View Details"
+                className="mt-2 bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600"
+                onClick={() => handleViewDetails(uniform)}
+              />
+            </div>
+          </div>
         ))}
       </div>
 
@@ -112,11 +123,7 @@ function ProductList() {
             </div>
 
             <p className="text-gray-700 mt-2">Price: ₹{selectedUniform.price}</p>
-            <p
-              className={
-                selectedUniform.availability === 'Out of Stock' ? 'text-red-600' : 'text-green-600'
-              }
-            >
+            <p className={selectedUniform.availability === 'Out of Stock' ? 'text-red-600' : 'text-green-600'}>
               Availability: {selectedUniform.availability}
             </p>
             <p className="text-yellow-500">Rating: {selectedUniform.rating} ★</p>
@@ -124,7 +131,8 @@ function ProductList() {
               <strong>Description:</strong> {selectedUniform.description}
             </p>
             <p className="text-gray-600">
-              <strong>Available Sizes:</strong> {selectedUniform.sizes?.join(', ')}
+              <strong>Available Sizes:</strong>{' '}
+              {Array.isArray(selectedUniform.sizes) ? selectedUniform.sizes.join(', ') : 'N/A'}
             </p>
 
             <Button

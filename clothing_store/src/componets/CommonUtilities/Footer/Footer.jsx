@@ -3,11 +3,11 @@ import Banner from '/Image/banner/footerBanner.png';
 import { FaFacebook, FaInstagram, FaLinkedin, FaLocationArrow, FaMobileAlt } from 'react-icons/fa';
 
 const footerLinks = [
-  { title: 'Home', link: '/#' },
-  { title: 'Uniforms', link: '/#about' },
-  { title: 'T-shirts', link: '/#about' },
-  { title: 'Caps', link: '/#about' },
-  { title: 'Contact', link: '/#contact' },
+  { title: 'Home', link: '/Home' },
+  { title: 'Uniforms', link: '/ProductList?category=uniform' },
+  { title: 'T-shirts', link: '/ProductList?category=t-shirt' },
+  { title: 'Caps', link: '/ProductList?category=cap' },
+  { title: 'Contact', link: '/Contact' },
 ];
 
 const Footer = () => {

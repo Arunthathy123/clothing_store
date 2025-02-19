@@ -1,0 +1,212 @@
+[
+    {
+      "id": 1,
+      "title": "Printed T-Shirt",
+      "image": "/Image/t-shirt/tShirt1.jpg",
+      "price": 500,
+      "availability": "In Stock",
+      "rating": 4.5,
+      "description": "A high-quality printed t-shirt made from soft cotton fabric.",
+      "sizes": ["S", "M", "L", "XL"],
+      "category": "t-shirt"
+    },
+    {
+      "id": 2,
+      "title": "Printed T-Shirt",
+      "image": "/Image/t-shirt/tShirt2.jpg",
+      "price": 550,
+      "availability": "In Stock",
+      "rating": 4.2,
+      "description": "Comfortable and stylish printed t-shirt with vibrant designs.",
+      "sizes": ["M", "L", "XL"],
+      "category": "t-shirt"
+    },
+    {
+      "id": 3,
+      "title": "Printed T-Shirt",
+      "image": "/Image/t-shirt/tShirt3.jpg",
+      "price": 600,
+      "availability": "In Stock",
+      "rating": 4.0,
+      "description": "Stylish casual uniform suitable for both formal and informal occasions.",
+      "sizes": ["S", "M", "L"],
+      "category": "t-shirt"
+    },
+    {
+      "id": 4,
+      "title": "Printed T-Shirt",
+      "image": "/Image/t-shirt/tShirt4.jpg",
+      "price": 620,
+      "availability": "Out of Stock",
+      "rating": 3.8,
+      "description": "Trendy printed t-shirt with a relaxed fit, perfect for daily wear.",
+      "sizes": ["M", "L"],
+      "category": "t-shirt"
+    },
+    {
+      "id": 5,
+      "title": "Printed T-Shirt",
+      "image": "/Image/t-shirt/tShirt5.jpg",
+      "price": 700,
+      "availability": "In Stock",
+      "rating": 4.7,
+      "description": "Unique graphic t-shirt made with eco-friendly materials.",
+      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "category": "t-shirt"
+    },
+    {
+      "id": 6,
+      "title": "Printed T-Shirt",
+      "image": "/Image/t-shirt/tShirt6.jpg",
+      "price": 750,
+      "availability": "In Stock",
+      "rating": 4.4,
+      "description": "Elegant formal uniform crafted for business and formal events.",
+      "sizes": ["S", "M", "L", "XL"],
+      "category": "t-shirt"
+    },
+    {
+      "id": 7,
+      "title": "Printed T-Shirt",
+      "image": "/Image/t-shirt/tShirt7.jpg",
+      "price": 800,
+      "availability": "In Stock",
+      "rating": 4.9,
+      "description": "Premium quality printed t-shirt with long-lasting colors.",
+      "sizes": ["M", "L", "XL", "XXL"],
+      "category": "t-shirt"
+    },
+    {
+      "id": 8,
+      "title": "Printed T-Shirt",
+      "image": "/Image/t-shirt/tShirt8.jpg",
+      "price": 500,
+      "availability": "In Stock",
+      "rating": 4.6,
+      "description": "Casual printed t-shirt perfect for outdoor activities.",
+      "sizes": ["S", "M", "L"],
+      "category": "t-shirt"
+    },
+    {
+      "id": 9,
+      "title": "Printed T-Shirt",
+      "image": "/Image/t-shirt/tShirt9.jpg",
+      "price": 650,
+      "availability": "Out of Stock",
+      "rating": 4.3,
+      "description": "Protective lab uniform designed for safety and ease of movement in laboratory environments.",
+      "sizes": ["M", "L", "XL"],
+      "category": "t-shirt"
+    },
+    {
+      "id": 10,
+      "title": "Printed caps",
+      "image": "/Image/caps/cap1.jpg",
+      "price": 500,
+      "availability": "In Stock",
+      "rating": 4.0,
+      "description": "Comfortable and stylish cap suitable for everyday use.",
+      "sizes": "Free Size",
+      "category": "cap"
+    },
+    {
+      "id": 11,
+      "title": "Printed caps",
+      "image": "/Image/caps/cap2.jpg",
+      "price": 450,
+      "availability": "In Stock",
+      "rating": 3.9,
+      "description": "Trendy cap with a custom print, perfect for casual wear.",
+      "sizes": "Free Size",
+      "category": "cap"
+    },
+    {
+      "id": 12,
+      "title": "Printed caps",
+      "image": "/Image/caps/cap3.jpg",
+      "price": 600,
+      "availability": "In Stock",
+      "rating": 4.0,
+      "description": "Stylish casual uniform suitable for both formal and informal occasions.",
+      "sizes": "Free Size",
+      "category": "cap"
+    },
+    {
+      "id": 13,
+      "title": "Printed caps",
+      "image": "/Image/caps/cap4.jpg",
+      "price": 520,
+      "availability": "In Stock",
+      "rating": 4.1,
+      "description": "Breathable and lightweight cap with adjustable strap.",
+      "sizes": "Free Size",
+      "category": "cap"
+    },
+    {
+      "id": 14,
+      "title": "Printed caps",
+      "image": "/Image/caps/cap5.jpg",
+      "price": 550,
+      "availability": "Out of Stock",
+      "rating": 4.1,
+      "description": "Light and airy summer uniform designed to keep you cool in hot weather.",
+      "sizes": "Free Size",
+      "category": "cap"
+    },
+    {
+      "id": 15,
+      "title": "Printed caps",
+      "image": "/Image/caps/cap9.jpg",
+      "price": 650,
+      "availability": "Out of Stock",
+      "rating": 4.3,
+      "description": "Protective lab uniform designed for safety and ease of movement in laboratory environments.",
+      "sizes": "Free Size",
+      "category": "cap"
+    },
+    {
+      "id": 16,
+      "title": "School Uniform",
+      "image": "/Image/outfit/outFit1.jpg",
+      "price": 500,
+      "availability": "In Stock",
+      "rating": 4.5,
+      "description": "A classic school uniform made with durable and comfortable fabric, perfect for daily wear.",
+      "sizes": ["S", "M", "L", "XL"],
+      "category": "uniform"
+    },
+    {
+      "id": 17,
+      "title": "Casual Uniform",
+      "image": "/Image/outfit/outFit3.jpg",
+      "price": 600,
+      "availability": "In Stock",
+      "rating": 4.0,
+      "description": "Stylish casual uniform suitable for both formal and informal occasions.",
+      "sizes": ["S", "M", "L"],
+      "category": "uniform"
+    },
+    {
+      "id": 18,
+      "title": "Winter Uniform",
+      "image": "/Image/outfit/outFit4.jpg",
+      "price": 800,
+      "availability": "In Stock",
+      "rating": 4.8,
+      "description": "Warm and cozy winter uniform designed to provide comfort during cold seasons.",
+      "sizes": ["M", "L", "XL", "XXL"],
+      "category": "uniform"
+    },
+    {
+      "id": 19,
+      "title": "Formal Uniform",
+      "image": "/Image/outfit/outFit6.jpg",
+      "price": 750,
+      "availability": "In Stock",
+      "rating": 4.4,
+      "description": "Elegant formal uniform crafted for business and formal events.",
+      "sizes": ["S", "M", "L", "XL"],
+      "category": "uniform"
+    }
+  ]
+  
