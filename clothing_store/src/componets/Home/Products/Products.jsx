@@ -3,6 +3,13 @@ import { FaStar } from 'react-icons/fa6';
 import Button from '../../CommonUtilities/Button/Button';
 import { JSON_FILES } from '../../../utils/constant';
 
+const categoryDescriptions = {
+  t_shirt: 'Stylish and customizable t-shirts with high-quality prints for any occasion.',
+  cap: 'Trendy and functional caps for everyday wear, offering style and sun protection.',
+  uniform: 'Comfortable and professional attire designed for a neat and cohesive look.',
+  hoodies: 'Cozy and versatile hoodies, perfect for casual and outdoor wear.'
+};
+
 const Products = () => {
   const [products, setProducts] = useState([]);
   const [visibleCount, setVisibleCount] = useState(5);
@@ -11,7 +18,7 @@ const Products = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch(JSON_FILES.PRODUCT);
+        const response = await fetch(JSON_FILES.PRODUCT_LIST);
         const data = await response.json();
         setProducts(data);
       } catch (error) {
@@ -37,22 +44,18 @@ const Products = () => {
           <h1 data-aos="fade-up" className="text-3xl font-bold text-gray-900">
             Products
           </h1>
-          <p data-aos="fade-up" className="text-xs text-gray-400">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit asperiores modi Sit asperiores modi
+          <p data-aos="fade-up" className="text-xs text-gray-500">
+          Discover our stylish and customizable t-shirts, perfect for any occasion with high-quality prints. Stay trendy and protected with our caps, designed for everyday wear. Achieve a professional and cohesive look with our comfortable uniforms. Embrace warmth and versatility with our hoodies, ideal for casual and outdoor wear.
           </p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 place-items-center gap-5">
-          {products.slice(0, visibleCount).map(({ id, img, price, title, description, material, rating, aosDelay }) => (
+          {products.slice(0, visibleCount).map(({ id, image, price, title, description, category, material, rating, aosDelay }) => (
             <div key={id} data-aos="fade-up" data-aos-delay={aosDelay} className="space-y-3">
-              <img src={img} alt={title} className="h-[300px] w-[400px] object-fill rounded-lg" />
+              <img src={image} alt={title} className="h-[300px] w-[400px] object-fill rounded-lg" />
               <div className="flex flex-col gap-2">
-                <h3 className="font-semibold">₹ {price}</h3>
                 <h3 className="font-semibold">{title}</h3>
-                <p className="text-sm text-gray-600">{description}</p>
-                <p className="text-sm text-gray-600">
-                  <span className="text-gray-950 text-base">Material:</span> {material}
-                </p>
+                <p className="text-sm text-gray-600">{categoryDescriptions[category.toLowerCase()] || description}</p>
                 <div className="flex items-center gap-1">
                   <FaStar className="text-yellow-400" />
                   <span>{rating}</span>

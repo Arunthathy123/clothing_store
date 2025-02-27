@@ -30,10 +30,10 @@ const TopProducts = () => {
       <div className="text-left mb-24 space-y-2">
         <p data-aos="fade-up" className="text-sm text-blue-800">Best Products</p>
         <h1 data-aos="fade-up" className="text-3xl text-gray-800 font-bold">Top Rated Products for You</h1>
-        <p data-aos="fade-up" className="text-xs text-gray-400">Discover our top-rated products, selected just for you.</p>
+        <p data-aos="fade-up" className="text-xs text-gray-500">Discover our top-rated products, selected just for you.</p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-28 place-items-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-28 place-items-center">
         {products.map(({ id, img, title, description, category }) => (
           <div
             key={id}
@@ -61,7 +61,7 @@ const TopProducts = () => {
               <Button
                 className="mt-6 mb-4 py-1 px-4 rounded-full bg-blue-950 text-white hover:scale-105 transition-transform duration-300 group-hover:bg-white group-hover:text-gray-950"
                 onClick={() => handleNavigate(category)}
-                label="Order Now"
+                label="View Products"
               />
             </div>
           </div>

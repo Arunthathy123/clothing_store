@@ -6,7 +6,6 @@ import Button from '../../CommonUtilities/Button/Button';
 import { usePopup } from '../../../context/PopupProvider';
 import { JSON_FILES } from '../../../utils/constant';
 const Hero = () => {
-  const { handleOrderPopup } = usePopup();
   const [imageList, setImageList] = useState([]);
 
   useEffect(() => {
@@ -70,13 +69,13 @@ const Hero = () => {
                   >
                     {description}
                   </p>
-                  <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+                  {/* <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
                     <Button
                       label="Order Now"
                       onClick={handleOrderPopup}
                       className="bg-gradient-to-r from-blue-800 to-blue-500 text-white text-xl py-2 px-4 rounded-full mt-6 hover:scale-105 transition duration-200 w-auto md:w-full lg:w-1/2 xl:w-1/4"
                     />
-                  </div>
+                  </div> */}
                 </div>
 
                 <div

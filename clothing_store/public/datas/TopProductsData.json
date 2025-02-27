@@ -3,7 +3,7 @@
       "id": 1,
       "img": "/Image/topProducts/cap2.jpg",
       "title": "Stylish Cap",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.",
+      "description": "Trendy and functional caps for everyday wear, offering style and sun protection.",
       "price": 150,
       "inStock": true,
       "category":"cap"
@@ -12,7 +12,7 @@
       "id": 2,
       "img": "/Image/topProducts/outFit3.jpg",
       "title": "Uniform Outfit",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempor incididunt ut labore.",
+      "description": "Comfortable and professional attire designed for a neat and cohesive look.",
       "price": 550,
       "inStock": false,
       "category":"uniform"
@@ -22,10 +22,20 @@
       "id": 3,
       "img": "/Image/topProducts/tShirt2.jpg",
       "title": "Printed T-Shirt",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ullamco laboris nisi.",
+      "description": "Stylish and customizable t-shirts with high-quality prints for any occasion",
       "price": 250,
       "inStock": true,
       "category":"t-shirt"
+
+    },
+    {
+      "id": 4,
+      "img": "/Image/hoodies/hoodie1.jpg",
+      "title": "Hoodie",
+      "description": "Cozy and versatile hoodies, perfect for casual and outdoor wear.",
+      "price": 250,
+      "inStock": true,
+      "category":"Hoodie"
 
     }
     

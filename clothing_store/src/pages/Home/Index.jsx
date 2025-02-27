@@ -21,7 +21,6 @@ function Index() {
         <TopProducts  />
         <AddBanner />
         <Notified />
-        <Products />
         <Testimonials />
         <Footer />
         <Popup />

@@ -68,10 +68,12 @@ function ProductList() {
             <img src={uniform.image} alt={uniform.title} className="max-h-72 w-full object-contain mb-6" />
             <div className="flex flex-col gap-2">
               <h3 className="text-lg font-semibold">{uniform.title}</h3>
-              <p className="text-gray-700">Price: ₹{uniform.price}</p>
-              <p className={uniform.availability === 'Out of Stock' ? 'text-red-600' : 'text-green-600'}>
-                <span className="text-sm">{uniform.availability}</span>
+              <p className= 'text-green-600'>
+                All Sizes Available
               </p>
+              {/* <p className={uniform.availability === 'Out of Stock' ? 'text-red-600' : 'text-green-600'}>
+                All Sizes Available
+              </p> */}
               <p className="text-sm text-yellow-500">{uniform.rating} ★</p>
               <Button
                 label="View Details"
@@ -112,23 +114,24 @@ function ProductList() {
               </div>
             </div>
 
-            <p className="text-gray-700 mt-2">Price: ₹{selectedUniform.price}</p>
-            <p className={selectedUniform.availability === 'Out of Stock' ? 'text-red-600' : 'text-green-600'}>
-              Availability: {selectedUniform.availability}
-            </p>
-            <p className="text-yellow-500">Rating: {selectedUniform.rating} ★</p>
-            <p className="text-gray-600 mt-2">
-              <strong>Description:</strong> {selectedUniform.description}
-            </p>
-            <p className="text-gray-600">
-              <strong>Available Sizes:</strong> {Array.isArray(selectedUniform.sizes) ? selectedUniform.sizes.join(', ') : 'N/A'}
-            </p>
+            <div className="mt-6 flex flex-col gap-3 mb-3">
+                {/* <p className={selectedUniform.availability === 'Out of Stock' ? 'text-red-600' : 'text-green-600'}>
+                Availability: {selectedUniform.availability}
+              </p> */}
+              <p className='text-green-600'>
+                  All Sizes Available
+                </p>
+              <p className="text-yellow-500">Rating: {selectedUniform.rating} ★</p>
+              <p className="text-gray-600 mt-2">
+                <strong>Description:</strong> {selectedUniform.description}
+              </p>
+              {/* <p className="text-gray-600">
+                <strong>Available Sizes:</strong> {Array.isArray(selectedUniform.sizes) ? selectedUniform.sizes.join(', ') : 'N/A'}
+              </p> */}
 
-            <Button
-              label="Order Now"
-              className={`px-4 py-1 rounded mt-6 ${selectedUniform.availability === 'Out of Stock' ? 'bg-gray-400 cursor-not-allowed' : 'bg-green-500 hover:bg-green-600 text-white'}`}
-              onClick={handleOrderNow}
-            />
+            </div>
+
+            
           </div>
         </div>
       )}

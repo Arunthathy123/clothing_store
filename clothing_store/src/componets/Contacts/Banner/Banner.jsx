@@ -11,7 +11,7 @@ const Banner = () => (
       backgroundRepeat: 'no-repeat',
     }}
   >
-    <div className="absolute inset-0 bg-blue-900 bg-opacity-50" />
+    <div className="absolute inset-0 bg-blue-950 bg-opacity-50" />
     <div className="relative z-10">
       <h1 className="text-2xl md:text-4xl font-bold">Contact Informations</h1>
       <p className="mt-2 text-sm md:text-lg">

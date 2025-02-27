@@ -3,7 +3,7 @@
         "id": "1",
         "img": "/Image/products/lowyer1.jpg",
         "title": "Lowyer",
-        "description": "Lorem ipsum dolor.",
+        "description": "Crafted from high-quality, breathable fabric, our uniforms provide comfort and durability for everyday wear. Designed for a professional look, they offer a perfect fit and long-lasting performance.",
         "material": "Cotton blend",
         "size": ["S", "M", "L", "XL"],
         "price": 1499,

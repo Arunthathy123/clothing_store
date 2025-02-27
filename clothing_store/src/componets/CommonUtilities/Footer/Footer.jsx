@@ -1,12 +1,13 @@
 import React from 'react';
 import Banner from '/Image/banner/footerBanner.png';
-import { FaFacebook, FaInstagram, FaLinkedin, FaLocationArrow, FaMobileAlt } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaLinkedin, FaLocationArrow, FaMobileAlt, FaEnvelope } from 'react-icons/fa';
 
 const footerLinks = [
   { title: 'Home', link: '/Home' },
   { title: 'Uniforms', link: '/ProductList?category=uniform' },
   { title: 'T-shirts', link: '/ProductList?category=t-shirt' },
   { title: 'Caps', link: '/ProductList?category=cap' },
+  { title: 'Hoodies', link: '/ProductList?category=Hoodie' },
   { title: 'Contact', link: '/Contact' },
 ];
 
@@ -25,12 +26,14 @@ const Footer = () => (
     <div className="container mx-auto px-4">
       <div data-aos="zoom-in" className="grid md:grid-cols-3 pb-44 pt-5">
         <div className="py-8 px-4">
-          <h2 className="sm:text-3xl text-xl font-bold mb-3 flex items-center gap-3">Shopsizzle</h2>
-          <p className="text-gray-300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum in beatae ea recusandae blanditiis veritatis.</p>
+          <h2 className="sm:text-3xl text-xl font-bold mb-3 flex items-center gap-3"><a href="#" className="font-bold text-2xl sm:text-3xl text-white">
+            <img src="/Image/banner/logo.jpg" alt="Logo" className="w-56" />
+          </a></h2>
+          <p className="text-gray-300">Your trusted source for quality uniforms. We provide a wide range of professional attire tailored to your needs.</p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 col-span-2 md:pl-10">
-          {['Important Links', 'Links'].map((heading) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 col-span-2 md:pl-10">
+          {['Important Links'].map((heading) => (
             <div key={heading} className="py-8 px-4">
               <h3 className="text-xl font-bold mb-3">{heading}</h3>
               <ul className="space-y-2">
@@ -52,8 +55,8 @@ const Footer = () => (
               ))}
             </div>
 
-            <div className="space-y-4">
-              {[{ icon: FaLocationArrow, text: 'Thiruvananthapuram, Kerala' }, { icon: FaMobileAlt, text: '+91 123456789' }].map(({ icon: Icon, text }, index) => (
+            <div className="space-y-4 mt-6">
+              {[{ icon: FaLocationArrow, text: '67/781 FAHIN ARCADE, Broadway, Ernakulam, kochi - 682031 Kerala, India' },{ icon: FaEnvelope, text: 'vmaxocompany@gmail.com' }, { icon: FaMobileAlt, text: '9061093399, 9061613998' }].map(({ icon: Icon, text }, index) => (
                 <div key={index} className="flex items-center space-x-3">
                   <Icon />
                   <span>{text}</span>

@@ -32,7 +32,11 @@ const ContactInfo = () => {
   };
 
   const GOOGLE_MAPS_API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
-  const mapSrc = `https://www.google.com/maps/embed/v1/place?key=${GOOGLE_MAPS_API_KEY}&q=GWJH%2BQC+Thiruvananthapuram,+Kerala/`;
+
+  const location = "X7QP+XF Kochi, Kerala";
+  const mapSrc = `https://www.google.com/maps/embed/v1/place?key=${GOOGLE_MAPS_API_KEY}&q=${encodeURIComponent(location)}`;
+
+  // const mapSrc = `https://www.google.com/maps/embed/v1/place?key=${GOOGLE_MAPS_API_KEY}&q=GWJH%2BQC+Thiruvananthapuram,+Kerala/`;
 
   return (
     <div className="mx-auto px-6 lg:px-32 py-10">

@@ -90,7 +90,7 @@
 
     {
       "id": 9,
-      "category": "t-shirt",
+      "category": "t_shirt",
       "title": "Printed T-Shirt",
       "image": "/Image/t-shirt/tShirt1.jpg",
       "price": 500,
@@ -101,7 +101,7 @@
     },
     {
       "id": 10,
-      "category": "t-shirt",
+      "category": "t_shirt",
       "title": "Printed T-Shirt",
       "image": "/Image/t-shirt/tShirt2.jpg",
       "price": 700,
@@ -112,7 +112,7 @@
     },
     {
       "id": 11,
-      "category": "t-shirt",
+      "category": "t_shirt",
       "title": "Printed T-Shirt",
       "image": "/Image/t-shirt/tShirt3.jpg",
       "price": 600,
@@ -123,7 +123,7 @@
     },
     {
       "id": 12,
-      "category": "t-shirt",
+      "category": "t_shirt",
       "title": "Printed T-Shirt",
       "image": "/Image/t-shirt/tShirt4.jpg",
       "price": 800,
@@ -134,7 +134,7 @@
     },
     {
       "id": 13,
-      "category": "t-shirt",
+      "category": "t_shirt",
       "title": "Printed T-Shirt",
       "image": "/Image/t-shirt/tShirt5.jpg",
       "price": 550,
@@ -145,7 +145,7 @@
     },
     {
       "id": 14,
-      "category": "t-shirt",
+      "category": "t_shirt",
       "title": "Printed T-Shirt",
       "image": "/Image/t-shirt/tShirt6.jpg",
       "price": 750,
@@ -156,7 +156,7 @@
     },
     {
       "id": 15,
-      "category": "t-shirt",
+      "category": "t_shirt",
       "title": "Printed T-Shirt",
       "image": "/Image/t-shirt/tShirt7.jpg",
       "price": 650,
@@ -167,7 +167,7 @@
     },
     {
       "id": 16,
-      "category": "t-shirt",
+      "category": "t_shirt",
       "title": "Printed T-Shirt",
       "image": "/Image/t-shirt/tShirt8.jpg",
       "price": 900,
@@ -178,7 +178,7 @@
     },
     {
         "id": 16,
-        "category": "t-shirt",
+        "category": "t_shirt",
         "title": "Printed T-Shirt",
         "image": "/Image/t-shirt/tShirt9.jpg",
         "price": 650,
@@ -189,7 +189,7 @@
       },
       {
         "id": 17,
-        "category": "t-shirt",
+        "category": "t_shirt",
         "title": "Printed T-Shirt",
         "image": "/Image/t-shirt/tShirt10.jpg",
         "price": 900,
@@ -315,6 +315,40 @@
           "category": "cap",
           "title": "Printed caps",
           "image": "/Image/caps/cap11.jpg",
+          "price": 900,
+          "availability": "In Stock",
+          "rating": 4.7,
+          "description": "Smart and professional event uniform suitable for special functions and corporate events.",
+          "sizes": "Free Size"
+        }
+        ,
+        {
+          "id": 28,
+          "category": "Hoodie",
+          "title": "Printed Hoodies",
+          "image": "/Image/hoodies/hoodie1.jpg",
+          "price": 900,
+          "availability": "In Stock",
+          "rating": 4.7,
+          "description": "Smart and professional event uniform suitable for special functions and corporate events.",
+          "sizes": "Free Size"
+        },
+        {
+          "id": 29,
+          "category": "Hoodie",
+          "title": "Printed Hoodies",
+          "image": "/Image/hoodies/hoodie2.jpg",
+          "price": 900,
+          "availability": "In Stock",
+          "rating": 4.7,
+          "description": "Smart and professional event uniform suitable for special functions and corporate events.",
+          "sizes": "Free Size"
+        },
+        {
+          "id": 30,
+          "category": "Hoodie",
+          "title": "Printed Hoodies",
+          "image": "/Image/hoodies/hoodie3.jpg",
           "price": 900,
           "availability": "In Stock",
           "rating": 4.7,

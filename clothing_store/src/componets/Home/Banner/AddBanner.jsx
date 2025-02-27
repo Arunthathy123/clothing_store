@@ -26,11 +26,10 @@ const AddBanner = () => {
 
           <div className="flex flex-col justify-center gap-6">
             <h1 data-aos="fade-up" className="text-3xl sm:text-4xl font-bold text-gray-900">
-              Winter Sale Up to 50% Off
+            About Our Service
             </h1>
             <p data-aos="fade-up" className="text-sm text-gray-500 leading-relaxed">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio.
-            </p>
+            We are dedicated to providing top-quality uniforms tailored to your industry. Whether in hospitality, retail, or corporate settings, our range of comfortable, durable, and customizable uniforms will meet your needs. Partner with us for a seamless experience from ordering to delivery.            </p>
 
             <div className="flex flex-col gap-4">
               {features.map((feature, index) => (

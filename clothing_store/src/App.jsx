@@ -6,6 +6,7 @@ import Contact from "./pages/Contact/Contact"
 import { PopupProvider } from "./context/PopupProvider"
 import ListProductsByCategory from "./pages/ProductDetails/ListProductsByCategory"
 import TopRated from "./pages/TopRated/TopRated"
+import AboutUs from "./pages/AboutUs/AboutUs"
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
         <Route path="/Home" element={<Index />} />
         <Route path="/Contact" element={<Contact />} />
         <Route path="/TopRated" element={<TopRated />} />
+        <Route path="/AboutUs" element={<AboutUs />} />
         <Route path="/ProductList" element={<ListProductsByCategory />} />
         
       </Routes>
