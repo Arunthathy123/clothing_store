@@ -10,10 +10,10 @@ const ContactInfo = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);
 
   const contactCards = [
-    { id: 1, title: 'Email Us', description: 'info@example.com', icon: <FaEnvelope className="text-[#b2924c] text-2xl" /> },
-    { id: 2, title: 'Call Us', description: '+123 456 7890', icon: <FaPhoneAlt className="text-[#b2924c] text-2xl" /> },
-    { id: 3, title: 'Visit Us', description: '123 Street, City, Country', icon: <FaMapMarkerAlt className="text-[#b2924c] text-2xl" /> },
-    { id: 4, title: 'Support', description: 'support@example.com', icon: <FaHeadset className="text-[#b2924c] text-2xl" /> },
+    { id: 1, title: 'Email Us', description: 'vmaxocompany@gmail.com', icon: <FaEnvelope className="text-[#b2924c] text-2xl" /> },
+    { id: 2, title: 'Call Us', description: '9061093399, 9061613998', icon: <FaPhoneAlt className="text-[#b2924c] text-2xl" /> },
+    { id: 3, title: 'Visit Us', description: 'FAHIN ARCADE, Broadway, Ernakulam, kochi - 682031 Kerala, India', icon: <FaMapMarkerAlt className="text-[#b2924c] text-2xl" /> },
+    { id: 4, title: 'Support', description: 'vmaxocompany@gmail.com ', icon: <FaHeadset className="text-[#b2924c] text-2xl" /> },
   ];
 
   const initialValues = { name: '', email: '', message: '' };
